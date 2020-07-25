@@ -78,4 +78,12 @@ public class BasePage {
         PointOption option2 = PointOption.point(width/2, height/4);
         action.press(option1).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(10))).moveTo(option2).release().perform();
     }
+
+    public void enterWebView() {
+        driver.getContextHandles().forEach((handle) -> {
+            if (handle.toString().contains("WEBVIEW")) {
+                driver.context(handle.toString());
+            }
+        });
+    }
 }

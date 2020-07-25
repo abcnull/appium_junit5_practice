@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 public class MainPage extends SnowballBasePage {
     public final By marketIcon = By.xpath("//*[@text='行情']");
     public final By searchInput = By.id("tv_search");
+    public final By transactionIcon = By.xpath("//*[@text='交易']");
 
     public MainPage(AppiumDriver driver) {
         super(driver);
@@ -29,5 +30,12 @@ public class MainPage extends SnowballBasePage {
      */
     public void enterMarketPage() {
         clickBtn(marketIcon);
+    }
+
+    /**
+     * 点击进入交易页面
+     */
+    public void enterTransactionPage() {
+        clickBtn(transactionIcon);
     }
 }

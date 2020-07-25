@@ -7,6 +7,6 @@ package basetest;
  */
 public class SnowballBaseTest extends BaseTest {
     public SnowballBaseTest() {
-        super("com.xueqiu.android", ".common.MainActivity");
+        super("com.xueqiu.android", ".view.WelcomeActivityAlias");
     }
 }
